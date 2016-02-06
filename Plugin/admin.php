@@ -5,7 +5,7 @@ plxToken::validateFormToken($_POST);
 		$plxPlugin->setParam('data', $_POST['data'], 'cdata');
 		$plxPlugin->setParam('select', $_POST['select'], 'cdata');
 		$plxPlugin->saveParams();
-		header('Location: parametres_plugin.php?p=Plugin');
+		header('Location: plugin.php?p=Plugin');
 		exit;
 	}
 ?>
@@ -32,7 +32,7 @@ plxToken::validateFormToken($_POST);
 ?>
 
 
-<form action="parametres_plugin.php?p=Plugin" method="post" class="nextum">
+<form action="plugin.php?p=Plugin" method="post" class="nextum">
 
 	<p>
 		<label for="data">Exemple:</label>
