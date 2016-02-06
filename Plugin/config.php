@@ -3,7 +3,7 @@
 plxToken::validateFormToken($_POST);
 	if(!empty($_POST)) {
 		$plxPlugin->setParam('data', $_POST['data'], 'cdata');
-		$plxPlugin->setParam('select', $_POST['select'], 'cdata');
+		$plxPlugin->setParam('script', $_POST['script'], 'cdata');
 		$plxPlugin->saveParams();
 		header('Location: parametres_plugin.php?p=Plugin');
 		exit;
@@ -27,7 +27,7 @@ plxToken::validateFormToken($_POST);
 
 <?php 
 
-	$select = $plxPlugin->getParam('select');
+	$script = $plxPlugin->getParam('script');
 
 ?>
 
@@ -40,10 +40,10 @@ plxToken::validateFormToken($_POST);
 	</p>
 
 	<p>
-		<label for="select"><?php $plxPlugin->lang('LABEL_JQUERY') ?></label>
-		<select name="select" id="select">
-			<option value="true"  <?php if ($select == 'true') { echo'selected';}?> >Oui</option>
-			<option value="false" <?php if ($select == 'false') { echo'selected';}?> >Non</option>
+		<label for="script"><?php $plxPlugin->lang('LABEL_JQUERY') ?></label>
+		<select name="script" id="select">
+			<option value="true"  <?php if ($script == 'true') { echo'selected';}?> >Oui</option>
+			<option value="false" <?php if ($script == 'false') { echo'selected';}?> >Non</option>
 		</select>
 	</p>
 	
