@@ -20,7 +20,7 @@ class Plugin extends plxPlugin {
     
     public function ThemeEndHead() { ?>
     
-        <link rel="stylesheet" href="<?php echo PLX_PLUGINS ?>Plugin/app/style.min.css">
+        <link rel="stylesheet" href="<?php echo PLX_PLUGINS ?>Plugin/APP/style.min.css">
 
      <?php
     }
